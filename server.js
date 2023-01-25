@@ -1,6 +1,5 @@
 // Require http module
 const http = require('http');
-
 // Require fs module
 const fs = require('fs');
 // Require minimist module (make sure you install this one via npm).
@@ -31,7 +30,7 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
 // 3. end with the data that you are reading in from ./public/index.html.
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
-    res.setHeader('Content-type', 'text/html');
+    res.setHeader('Content-Type', 'text/html');
     res.end(data);
 })
 
